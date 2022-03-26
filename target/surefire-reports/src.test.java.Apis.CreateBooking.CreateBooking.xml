@@ -1,0 +1,19 @@
+<testsuite failures="0" name="src/test/java/Apis/CreateBooking/CreateBooking.feature" skipped="0" tests="1" time="1.698247">
+  <testcase classname="src.test.java.Apis.CreateBooking.CreateBooking" name="Create booking" time="1.698247">
+    <system-out>* url url ................................................................. passed
+* header Content-Type = 'application/json' ................................ passed
+* header Accept = 'application/json' ...................................... passed
+* def body = .............................................................. passed
+Given path 'booking' ...................................................... passed
+And request body .......................................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+And match response.booking.firstname contains 'Jim' ....................... passed
+And match response.booking.lastname contains 'Brown' ...................... passed
+And match response.booking.totalprice contains 111 ........................ passed
+And match response.booking.depositpaid contains true ...................... passed
+And match response.booking.bookingdates.checkin contains '2018-01-01' ..... passed
+And match response.booking.bookingdates.checkout contains '2019-01-01' .... passed
+And match response.booking.additionalneeds contains 'Breakfast' ........... passed</system-out>
+  </testcase>
+</testsuite>
